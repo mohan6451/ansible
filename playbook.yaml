@@ -1,5 +1,5 @@
 - name: ping the server
-  host: app
+  hosts: app
 
   tasks:
   - name: ping
