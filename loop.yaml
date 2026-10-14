@@ -13,7 +13,7 @@
 
   tasks:
   - name: installing using advanced loop
-    ansible.builtin.dnf:
+    ansible.builtin.package:
       name: "{{ name }}" 
       state: "{{ state }}"
     loop:
