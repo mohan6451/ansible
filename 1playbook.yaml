@@ -5,7 +5,7 @@
    user: mohan
    os: redhat
    cloud: AWS
-     
+   
   tasks:
   - name: vars at play level 
     ansible.builtin.debug:
