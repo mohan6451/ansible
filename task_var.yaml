@@ -1,0 +1,10 @@
+- name: task level vars
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: vars at task level
+    vars:
+      os: redhat
+      author: mohan
+      ansible.builtin.debug:
+        msg: " the author of file is {{author}} and using the {{os}} server"
