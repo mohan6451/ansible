@@ -1,0 +1,14 @@
+- user: functions
+  hosts: localhost
+  connection: local
+  vars:
+    name: mohan
+    tech: linux, shell, ansible, terraform, k8s, docker, jenkins
+  tasks:
+  - name: default vars
+    ansible.builtin.debug:
+      msg: "Hello, {{ name | default('ramesh')}}"
+
+  - name: convert string to list
+    ansible.builtin.debug:
+      msg: "list of tech: {{ tech | split (',')}}"

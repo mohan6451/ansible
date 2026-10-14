@@ -6,4 +6,4 @@
   tasks:
   - name: default vars
     ansible.builtin.debug:
-      msg: "Hello, {{ name | default('rames')}}"
+      msg: "Hello, {{ name | default('ramesh')}}" # when no var is defined  it use the default value
