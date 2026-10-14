@@ -1,0 +1,7 @@
+- name: gathering facts
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: ping using condition
+    ansible.builtin.ping:
+    when: ansible_system_vendor == "Amazon EC2",
