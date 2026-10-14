@@ -1,0 +1,20 @@
+- name: ping the server
+  hosts: localhost
+  connection: local
+  vars: 
+    course: "ansible"
+    number: 121
+    is_live: True # boolean
+    tools: ["linux", "shell", "terraform"] #list
+    cloud: # list
+    - aws
+    - azure
+    - gcp
+    concepts: # dictionary / map / object
+      orchis: k8s
+      image: docker
+      security: trivy
+  tasks:
+  - name: exploring datatypes
+    ansible.builtin.debug:
+      msg: "{{number}}, {{tools}}, {{cloud}}, {{concepts}}"
