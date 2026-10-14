@@ -1,0 +1,15 @@
+- name: ping the server
+  hosts: localhost
+  connection: local
+  vars_prompt: 
+  - name: username
+    prompt: what is your name?
+    private: false
+  - name: password
+    prompt: enter the password please
+    private: true
+
+  tasks:
+  - name: exploring the variables prompt which is by providing data 
+    ansible.builtin.debug:
+      msg: "{{username}}, {{password}}"
