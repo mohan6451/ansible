@@ -1,13 +1,12 @@
 - name: ping the server
   hosts: localhost
   connection: local
-
+  vars_files: 
+    - variables.yaml
   tasks:
   - name: ping
     ansible.builtin.ping:
 
   - name: exploring the variable, that from the external file
-    vars_files: 
-    - variables.yaml
     ansible.builtin.debug:
       msg: "{{cloud}}, {{course}}, {{os}}, {{user}}, {{date}}"
