@@ -1,0 +1,12 @@
+- name: play level vars
+  hosts: localhost
+  connection: local
+  vars: 
+   user: mohan
+   os: redhat
+   cloud: AWS
+     
+  tasks:
+  - name: "{{user}}"
+    ansible.builtin.debug:
+    msg: "{{user}}, is using the {{cloud}} platform to launch the {{os}} server"
