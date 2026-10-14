@@ -8,6 +8,6 @@
 
   - name: exploring the variable, that from the external file
     vars: 
-    - variable.yaml
+    - variables.yaml
     ansible.builtin.debug:
       msg: "{{cloud}}, {{course}}, {{os}}, {{user}}, {{date}}"
