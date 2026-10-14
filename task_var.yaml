@@ -6,5 +6,5 @@
     vars:
       os: redhat
       author: mohan
-      ansible.builtin.debug:
+    ansible.builtin.debug:
         msg: " the author of file is {{author}} and using the {{os}} server"
