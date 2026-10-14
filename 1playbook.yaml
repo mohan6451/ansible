@@ -7,6 +7,6 @@
    cloud: AWS
      
   tasks:
-  - name: "{{user}}"
+  - name: vars at play level 
     ansible.builtin.debug:
     msg: "{{user}}, is using the {{cloud}} platform to launch the {{os}} server"
