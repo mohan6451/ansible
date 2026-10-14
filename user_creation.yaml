@@ -12,6 +12,25 @@
     ansible.builtin.debug:
       msg: "{{ user_output}}"
 
-  # - name: create user
-  #   ansible.builtin.shell: useradd mohan
-  #   when: 
+#  result: 
+#"msg": {
+#         "changed": true,
+#         "cmd": "id mohan",
+#         "delta": "0:00:00.009966",
+#         "end": "2026-10-14 17:19:25.467201",
+#         "failed": true,
+#         "msg": "non-zero return code",
+#         "rc": 1,
+#         "start": "2026-10-14 17:19:25.457235",
+#         "stderr": "id: ‘mohan’: no such user",
+#         "stderr_lines": [
+#             "id: ‘mohan’: no such user"
+#         ],
+#         "stdout": "",
+#         "stdout_lines": []
+#     }
+
+
+  - name: create user
+    ansible.builtin.shell: useradd mohan
+    when: user_output.rc != 0
