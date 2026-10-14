@@ -11,7 +11,7 @@
 
   - name: convert string to list
     ansible.builtin.debug:
-      msg: "list of tech: {{ tech )}}"
+      msg: "list of tech: {{ tech }}"
 
   - name: convert string to list
     ansible.builtin.debug:
