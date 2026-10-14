@@ -5,3 +5,9 @@
   tasks:
   - name: ping
     ansible.builtin.ping:
+
+  - name: exploring the variable, that from the external file
+    vars: 
+    - variable.yaml
+    ansible.builtin.debug:
+      msg: "{{cloud}}, {{course}}, {{os}}, {{user}}, {{date}}"
