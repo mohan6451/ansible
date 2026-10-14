@@ -1,5 +1,6 @@
 - name: install nginx and start
-  hosts: web
+  hosts: localhost
+  connection: local
   become: yes
 
   tasks:
