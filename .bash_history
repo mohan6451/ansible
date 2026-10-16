@@ -904,3 +904,5 @@ omit --global
 git config  user.email "mohankandregula1@gmail.com"
 #1792181879
 git config user.name "mohan6451"
+#1792181885
+git add . ; git commit -m "ansible lab" ; git push origin main
